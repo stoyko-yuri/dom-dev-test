@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "../../components/Header";
+import { useAppSelector } from "../../redux/hooks";
 import { LayoutStyled, WrapperStyled } from "./MainLayout.styled";
 
 interface LayoutProps {
@@ -7,9 +8,11 @@ interface LayoutProps {
 }
 
 export const MainLayout: React.FC<LayoutProps> = ({ children }) => {
+  const { todos } = useAppSelector((state) => state.todosSlice);
+
   return (
     <LayoutStyled>
-      <Header todosQty={0} />
+      <Header todosQty={todos.length} />
       <WrapperStyled>{children}</WrapperStyled>
     </LayoutStyled>
   );

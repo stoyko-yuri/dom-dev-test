@@ -3,7 +3,7 @@ import { ButtonWrapper } from "./Button.styled";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  buttonType: "default" | "edit" | "remove";
+  buttonType: "default" | "save" | "edit" | "remove";
 }
 
 export const Button: React.FC<ButtonProps> = ({

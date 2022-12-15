@@ -26,6 +26,10 @@ export const ButtonWrapper = styled.button<ButtonProps>`
         return css`
           background-color: #34c239;
         `;
+      case "save":
+        return css`
+          background-color: #3e60d6;
+        `;
       default:
         return css`
           padding: 0px 20px;

@@ -3,28 +3,17 @@ import GlobalStyled from "./assets/styles/Global.styled";
 import { NewTodoForm } from "./components/Forms";
 import { TodosList } from "./components/Lists";
 import { MainLayout } from "./layouts";
-import { ITodoItem } from "./types";
-
-const someTodos: ITodoItem[] = [
-  {
-    _id: "123sad12",
-    isCompleted: true,
-    task: "buy a milk",
-  },
-  {
-    _id: "321dsa12",
-    isCompleted: false,
-    task: "drink a milk",
-  },
-];
+import { useAppSelector } from "./redux/hooks";
 
 export const App: React.FC = () => {
+  const { todos } = useAppSelector((state) => state.todosSlice);
+
   return (
     <>
       <GlobalStyled />
       <MainLayout>
         <NewTodoForm />
-        <TodosList todos={someTodos} />
+        <TodosList todos={todos} />
       </MainLayout>
     </>
   );

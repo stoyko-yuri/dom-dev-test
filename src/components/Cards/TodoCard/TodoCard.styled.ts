@@ -20,3 +20,11 @@ export const TodoCardControls = styled.div`
   align-items: center;
   column-gap: 6px;
 `;
+
+export const TodoCardEdit = styled.div`
+  margin: 0 10px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+`;
