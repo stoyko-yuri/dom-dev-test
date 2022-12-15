@@ -10,4 +10,22 @@ export default createGlobalStyle`
   html {
     font-size: 18px
   }
+
+  :root { 
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input, button {
+    outline: none;
+    border: none;
+  }
+
+  svg {
+    size: 20px;
+  }
 `;
